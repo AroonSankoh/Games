@@ -1,6 +1,5 @@
 package StreetCraps;
 
-import java.util.Arrays;
 import support.cse131.ArgsProcessor;
 
 /**
@@ -10,7 +9,7 @@ import support.cse131.ArgsProcessor;
  */
 public class MainGame {  
 	
-	private static final int you = 0, max = 7, min = 1;
+	private static final int max = 7, min = 1;
 	private static final String pass = "firstRoundWin", pointUp = "Win", crap = "firstRoundLoss", sevenOut = "Loss";
 	static int Turn = 0;
 	int die1, die2, dieSum, point;

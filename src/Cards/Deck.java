@@ -120,13 +120,14 @@ public class Deck {
 	}
 	
 	/**
-	 * Takes card(s) from the main deck and then puts them into a players hand.
+	 * Takes card(s) from the main deck adn then puts them into a players hand.
 	 * @param player the player to deal to.
 	 * @param cards the number of cards to deal.
+	 * @param show if the cards dealt should be revealed to the table or not.
 	 * @return an array of the drawn cards if the mainDeck is not empty, otherwise the error card.
 	 */
-	
-	public Card[] deal(Player player, int cards) {
+			
+	public Card[] deal(Player player, int cards, boolean show) {
 		if (!mainDeck.isEmpty()) {
 			if (cards > getDeckSize()) {
 				cards = getDeckSize();
@@ -138,10 +139,12 @@ public class Deck {
 				mainDeck.remove(0);
 				player.addToHand(card);	
 		}
-		for ( int i = 0; i < drawncards.length; ++i ) {
-			drawncards[i].peak();
-		}
-		return drawncards;
+			if (show) {
+				for ( int i = 0; i < drawncards.length; ++i ) {
+					drawncards[i].peak();
+				}
+			}
+			return drawncards;
 		}
 		else {
 			Card[] errorA = {error};
@@ -150,6 +153,9 @@ public class Deck {
 		}
 	}
 	
+	/**
+	 * Shuffles all the cards and places them back into the main deck. 
+	 */
 	public void shuffle() {
 		if (!mainDeck.isEmpty()){
 			int deckSize = getDeckSize(); 
@@ -167,10 +173,17 @@ public class Deck {
 		}
 	}
 	
+	/**
+	 * Generates a random number between a range.
+	 * @param min The minimum of the range.
+	 * @param max The maximum of the range.
+	 * @return The random number.
+	 */
 	public int randomNumber(int min, int max) {
 		return (int) (Math.random() * (max - min) + min);
 	}
 	
 	public static void main(String[] args) {
+		
 	}
 }

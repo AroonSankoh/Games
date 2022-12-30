@@ -13,6 +13,7 @@ import Cards.Card;
 public class Player {
 	
 	int number;
+	double wager;
 	ArrayList<Card> Hand = new ArrayList<Card>();
 	
 	
@@ -28,6 +29,13 @@ public class Player {
 		return number;
 	}
 	
+	public double getWager() {
+		return wager;
+	}
+	
+	public void setWager(double wager) {
+		this.wager = wager;
+	}
 	/**
 	 * Peaks at each card in a players hand.
 	 */

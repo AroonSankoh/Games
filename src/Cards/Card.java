@@ -8,7 +8,7 @@ package Cards;
 
 public class Card {
 	
-	int value;
+	public int value;
 	private static final int aceValue = 1; 
 	private static final int jackValue = 11;
 	private static final int queenValue = 12;

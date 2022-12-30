@@ -4,7 +4,7 @@ import support.cse131.ArgsProcessor;
 
 /**
  * 
- * @author Aroon Sankoh (aroonjsankoh@gmail.com
+ * @author Aroon Sankoh (aroonjsankoh@gmail.com)
  *
  */
 public class MainGame {  
